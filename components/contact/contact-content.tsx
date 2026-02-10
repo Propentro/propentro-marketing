@@ -35,8 +35,7 @@ export function ContactContent() {
     try {
       const response = await fetch("/api/contact", {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(Object.fromEntries(formData)),
+        body: formData,
       });
 
       const data = await response.json();
