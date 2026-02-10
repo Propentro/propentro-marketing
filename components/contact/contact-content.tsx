@@ -35,7 +35,7 @@ export function ContactContent() {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: 'POST',
-        headers: {'Content-Type': 'x-www-form-urlencoded'},
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data),
       });
 
