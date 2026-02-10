@@ -9,6 +9,7 @@ export async function POST(req: NextRequest) {
 
     const response = await fetch(WEB3FORMS_URL, {
       method: "POST",
+      
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...body, access_key: ACCESS_KEY }),
     });
