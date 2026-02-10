@@ -31,10 +31,19 @@ export function ContactContent() {
 
     
     const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "0ffd8ede-6eaa-4811-b9d8-6c19af48a4cd");
+    formData.append("from_name", "Propentro Contact Form");
+
+    const name = formData.get("firstName") || "Someone";
+    const company = formData.get("company") || "Unknown";
+    formData.append("subject", `New enquiry from ${name} @ ${company}`);
+
+    const email = formData.get("email");
+    if (email) formData.append("replyto", email as string);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: 'POST',
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
         body: formData,
       });
 
@@ -42,7 +51,7 @@ export function ContactContent() {
 
       if (data.success) {
         setSubmitted(true);
-        e.target.reset();
+        e.currentTarget.reset();
       } else {
         setError(true);
       }
@@ -99,6 +108,9 @@ export function ContactContent() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Honeypot spam protection — invisible to users */}
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-xs font-medium text-foreground mb-1.5">

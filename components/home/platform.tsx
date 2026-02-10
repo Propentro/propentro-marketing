@@ -12,48 +12,60 @@ import {
   FolderOpen,
 } from "lucide-react";
 
+const CX = 400;
+const CY = 260;
+const R = 210;
+
+function coords(angle: number) {
+  const rad = (angle * Math.PI) / 180;
+  return {
+    x: Math.round(CX + R * Math.cos(rad)),
+    y: Math.round(CY + R * Math.sin(rad)),
+  };
+}
+
 const modules = [
   {
     icon: Building2,
     name: "Properties & Units",
     desc: "Your entire portfolio, structured and searchable.",
-    angle: 0,
+    ...coords(0),
   },
   {
     icon: Users,
     name: "People",
     desc: "Tenants, landlords, contractors — one profile, multiple roles.",
-    angle: 51.4,
+    ...coords(51.4),
   },
   {
     icon: FileText,
     name: "Leases",
     desc: "Draft to signature to renewal. One flow.",
-    angle: 102.8,
+    ...coords(102.8),
   },
   {
     icon: Wallet,
     name: "Finances",
     desc: "Open banking. Automated reconciliation. Real-time cash flow.",
-    angle: 154.3,
+    ...coords(154.3),
   },
   {
     icon: Wrench,
     name: "Maintenance",
     desc: "Request to completion. Fully automated.",
-    angle: 205.7,
+    ...coords(205.7),
   },
   {
     icon: ShieldCheck,
     name: "Compliance",
     desc: "Every deadline tracked. Every certificate managed.",
-    angle: 257.1,
+    ...coords(257.1),
   },
   {
     icon: FolderOpen,
     name: "Documents",
     desc: "Organized, versioned, linked, searchable.",
-    angle: 308.6,
+    ...coords(308.6),
   },
 ];
 
@@ -85,41 +97,27 @@ export function Platform() {
 
           {/* Connecting lines + nodes */}
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 800 520" aria-hidden="true">
-            {modules.map((m) => {
-              const cx = 400;
-              const cy = 260;
-              const r = 210;
-              const rad = (m.angle * Math.PI) / 180;
-              const x = cx + r * Math.cos(rad);
-              const y = cy + r * Math.sin(rad);
-              return (
-                <line
-                  key={m.name}
-                  x1={cx}
-                  y1={cy}
-                  x2={x}
-                  y2={y}
-                  stroke="hsl(263 70% 42% / 0.12)"
-                  strokeWidth="1"
-                  strokeDasharray="4 4"
-                />
-              );
-            })}
+            {modules.map((m) => (
+              <line
+                key={m.name}
+                x1={CX}
+                y1={CY}
+                x2={m.x}
+                y2={m.y}
+                stroke="hsl(263 70% 42% / 0.12)"
+                strokeWidth="1"
+                strokeDasharray="4 4"
+              />
+            ))}
           </svg>
 
           {modules.map((m) => {
-            const cx = 400;
-            const cy = 260;
-            const r = 210;
-            const rad = (m.angle * Math.PI) / 180;
-            const x = cx + r * Math.cos(rad);
-            const y = cy + r * Math.sin(rad);
             const Icon = m.icon;
             return (
               <div
                 key={m.name}
                 className="absolute w-48 -translate-x-1/2 -translate-y-1/2 group"
-                style={{ left: x, top: y }}
+                style={{ left: m.x, top: m.y }}
               >
                 <div className="flex flex-col items-center text-center gap-2 p-4 rounded-xl border border-border bg-background shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-default">
                   <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center">
