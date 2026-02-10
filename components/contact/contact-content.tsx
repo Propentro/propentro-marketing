@@ -30,12 +30,18 @@ export function ContactContent() {
     setError(false);
 
     const formData = new FormData(e.currentTarget);
-    formData.append("access_key", "0ffd8ede-6eaa-4811-b9d8-6c19af48a4cd");
+    const json: Record<string, string> = {
+      access_key: "0ffd8ede-6eaa-4811-b9d8-6c19af48a4cd",
+    };
+    formData.forEach((value, key) => {
+      json[key] = value as string;
+    });
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(json),
       });
 
       const data = await response.json();
