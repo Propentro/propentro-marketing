@@ -21,10 +21,35 @@ const countryOptions = [
 export function ContactContent() {
   const ref = useScrollAnimation();
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(false);
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "0ffd8ede-6eaa-4811-b9d8-6c19af48a4cd");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -182,10 +207,17 @@ export function ContactContent() {
 
                 <button
                   type="submit"
-                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-[10px] bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary/90 transition-all hover:shadow-md min-h-[48px]"
+                  disabled={loading}
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-[10px] bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary/90 transition-all hover:shadow-md min-h-[48px] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
+
+                {error && (
+                  <p className="text-xs text-red-500">
+                    Something went wrong. Please try again or email us directly.
+                  </p>
+                )}
 
                 <p className="text-xs text-muted-foreground">
                   We respond within one business day.
