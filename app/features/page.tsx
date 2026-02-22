@@ -1,32 +1,32 @@
 import type { Metadata } from "next";
 import { FeaturesHero } from "@/components/features/hero";
-import { PropertyModule } from "@/components/features/module-property";
-import { PartyModule } from "@/components/features/module-party";
-import { LeaseModule } from "@/components/features/module-lease";
 import { FinanceModule } from "@/components/features/module-finance";
-import { MaintenanceModule } from "@/components/features/module-maintenance";
 import { ComplianceModule } from "@/components/features/module-compliance";
+import { MaintenanceModule } from "@/components/features/module-maintenance";
+import { LeaseModule } from "@/components/features/module-lease";
+import { PropertyModule } from "@/components/features/module-property";
+import { PortalsModule } from "@/components/features/module-portals";
 import { DocumentModule } from "@/components/features/module-document";
-import { CTA } from "@/components/home/cta";
+import { FeaturesCTA } from "@/components/features/features-cta";
 
 export const metadata: Metadata = {
   title: "Features — Propentro Property Management Platform",
   description:
-    "Seven integrated modules that replace your disconnected stack with one intelligent platform. Properties, people, leases, finances, maintenance, compliance, and documents.",
+    "Modular property management platform: finances, compliance, maintenance, leasing, properties, portals, and documents. Start with what you need, add more as you grow.",
 };
 
 export default function FeaturesPage() {
   return (
     <>
       <FeaturesHero />
-      <PropertyModule />
-      <PartyModule />
-      <LeaseModule />
       <FinanceModule />
-      <MaintenanceModule />
       <ComplianceModule />
+      <MaintenanceModule />
+      <LeaseModule />
+      <PropertyModule />
+      <PortalsModule />
       <DocumentModule />
-      <CTA />
+      <FeaturesCTA />
     </>
   );
 }

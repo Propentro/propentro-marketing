@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Mail, ExternalLink } from "lucide-react";
 
-const unitOptions = ["1–50", "51–200", "201–500", "501–1,000", "1,001–5,000", "5,000+"];
+const unitOptions = ["1\u201350", "51\u2013200", "201\u2013500", "501\u20131,000", "1,001\u20135,000", "5,000+"];
 const countryOptions = [
   "Ireland",
   "United Kingdom",
@@ -29,14 +29,13 @@ export function ContactContent() {
     setLoading(true);
     setError(false);
 
-    
     const formData = new FormData(e.currentTarget);
     formData.append("access_key", "0ffd8ede-6eaa-4811-b9d8-6c19af48a4cd");
-    formData.append("from_name", "Propentro Contact Form");
+    formData.append("from_name", "Propentro Demo Request");
 
     const name = formData.get("firstName") || "Someone";
     const company = formData.get("company") || "Unknown";
-    formData.append("subject", `New enquiry from ${name} @ ${company}`);
+    formData.append("subject", `Demo request from ${name} @ ${company}`);
 
     const email = formData.get("email");
     if (email) formData.append("replyto", email as string);
@@ -69,10 +68,11 @@ export function ContactContent() {
           {/* Left column */}
           <div className="flex-1 lg:max-w-md">
             <h1 className="animate-on-scroll font-display text-4xl md:text-5xl font-semibold leading-[1.1] tracking-tight text-foreground">
-              Let{"'"}s Talk<span className="text-primary">.</span>
+              Book a Demo<span className="text-primary">.</span>
             </h1>
             <p className="animate-on-scroll mt-5 text-base leading-relaxed text-muted-foreground">
-              Whether you manage 50 units or 5,000 — tell us about your operation.
+              Whether you manage 30 units or 3,000 — Propentro adapts to your operation.
+              Tell us about your workflow and we&apos;ll show you the modules that matter most to you.
             </p>
 
             <div className="animate-on-scroll mt-8 space-y-4">
@@ -100,10 +100,10 @@ export function ContactContent() {
             {submitted ? (
               <div className="rounded-xl border border-border bg-secondary p-8 text-center">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                  Message sent.
+                  Demo request received.
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  We respond within one business day.
+                  We&apos;ll respond within one business day with available demo times.
                 </p>
               </div>
             ) : (
@@ -223,7 +223,7 @@ export function ContactContent() {
                   disabled={loading}
                   className="w-full sm:w-auto inline-flex items-center justify-center rounded-[10px] bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary/90 transition-all hover:shadow-md min-h-[48px] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading ? "Sending..." : "Send Message"}
+                  {loading ? "Sending..." : "Request a Demo"}
                 </button>
 
                 {error && (
@@ -233,7 +233,7 @@ export function ContactContent() {
                 )}
 
                 <p className="text-xs text-muted-foreground">
-                  We respond within one business day.
+                  We&apos;ll respond within 1 business day with available demo times. No sales spam.
                 </p>
               </form>
             )}

@@ -7,22 +7,22 @@ const values = [
   {
     icon: Crosshair,
     title: "Operator-First",
-    desc: "Every feature exists because a property manager needed it.",
+    desc: "Every feature exists because a property manager needed it — not because a product team thought it looked good in a demo.",
   },
   {
     icon: ShieldCheck,
     title: "Compliance by Default",
-    desc: "Legal protection is built in, not bolted on.",
+    desc: "RTB, RPZ, gas safety, BER — legal protection is built in, not bolted on. The platform knows the rules so you don't have to remember them.",
   },
   {
     icon: TrendingUp,
     title: "Scale Without Headcount",
-    desc: "500 units with the same team that manages 50.",
+    desc: "Manage 500 units with the same team that manages 50. Automation handles the repetitive work, you handle the exceptions.",
   },
   {
     icon: Gem,
     title: "Honest Product",
-    desc: "No vanity features. We build what works.",
+    desc: "No vanity features. No feature flags for the demo. We build what survives Monday morning.",
   },
 ];
 
@@ -33,7 +33,7 @@ export function Principles() {
     <section ref={ref} className="bg-secondary py-24 md:py-32">
       <div className="mx-auto max-w-5xl px-5 lg:px-8">
         <div className="text-center mb-12">
-          <p className="animate-on-scroll section-label text-accent justify-center mb-5">OUR PRINCIPLES</p>
+          <p className="animate-on-scroll section-label text-accent justify-center mb-5">OUR APPROACH</p>
         </div>
 
         <div className="stagger-children grid grid-cols-1 md:grid-cols-2 gap-4">

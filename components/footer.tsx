@@ -23,11 +23,9 @@ export function Footer() {
             Contact
           </Link>
           <span className="hidden md:inline text-border">{"/"}</span>
-          <span>Privacy</span>
+          <a href="mailto:hello@propentro.com" className="hover:text-foreground transition-colors">hello@propentro.com</a>
           <span className="hidden md:inline text-border">{"/"}</span>
-          <span>Terms</span>
-          <span className="hidden md:inline text-border">{"/"}</span>
-          <span>{"© 2025 Propentro"}</span>
+          <span>{"© 2026 Propentro"}</span>
         </div>
       </div>
     </footer>
