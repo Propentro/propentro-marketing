@@ -30,7 +30,7 @@ const problems = [
     icon: Wrench,
     headline: "Maintenance requests disappear",
     description:
-      "Tenants submit online, auto-triage by cost threshold, contractors notified \u2014 you handle exceptions only.",
+      "Tenants submit online, auto-triage by cost threshold, contractors notified  you handle exceptions only.",
     anchor: "/features#maintenance",
   },
   {
@@ -44,7 +44,7 @@ const problems = [
     icon: Phone,
     headline: "Landlords call us for everything",
     description:
-      "Give landlords their own portal \u2014 real-time rent, maintenance updates, statements. Fewer calls.",
+      "Give landlords their own portal  real-time rent, maintenance updates, statements. Fewer calls.",
     anchor: "/features#portals",
   },
   {
@@ -71,7 +71,7 @@ export function FindYourStartingPoint() {
             <span className="font-light">.</span>
           </h2>
           <p className="animate-on-scroll mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            You don{"'"}t need everything on day one \u2014 start with the problem
+            You don{"'"}t need everything on day one  start with the problem
             that costs you the most time, and add more as you grow.
           </p>
         </div>
@@ -109,7 +109,7 @@ export function FindYourStartingPoint() {
             their maintenance history, their compliance documents, and their
             landlord{"'"}s portal.{" "}
             <span className="text-foreground font-medium">
-              Start with one \u2014 the rest clicks into place.
+              Start with one  the rest clicks into place.
             </span>
           </p>
           <p className="mt-4 text-sm font-semibold text-foreground">

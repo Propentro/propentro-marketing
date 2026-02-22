@@ -13,11 +13,11 @@ const highlights = [
 ];
 
 const deadlines = [
-  { item: "Gas Safety Cert \u2014 Block A", property: "Riverside Court", daysLeft: 42, urgency: "ok" as const },
+  { item: "Gas Safety Cert  Block A", property: "Riverside Court", daysLeft: 42, urgency: "ok" as const },
   { item: "Insurance Renewal", property: "Oak House", daysLeft: 14, urgency: "warn" as const },
-  { item: "BER Certificate \u2014 Unit 3", property: "Park View", daysLeft: 3, urgency: "danger" as const },
+  { item: "BER Certificate  Unit 3", property: "Park View", daysLeft: 3, urgency: "danger" as const },
   { item: "Fire Alarm Inspection", property: "The Elms", daysLeft: -2, urgency: "overdue" as const },
-  { item: "Electrical Cert \u2014 Unit 9A", property: "Riverside Court", daysLeft: 28, urgency: "ok" as const },
+  { item: "Electrical Cert  Unit 9A", property: "Riverside Court", daysLeft: 28, urgency: "ok" as const },
 ];
 
 function urgencyStyle(u: "ok" | "warn" | "danger" | "overdue") {
@@ -86,7 +86,7 @@ export function ComplianceModule() {
               The gas cert for Block A expired 3 weeks ago. You only find out
               when the inspector shows up. With Propentro, every cert, insurance,
               and inspection is tracked with automated 90/60/30 day alerts.
-              Risk-scored dashboards surface what needs attention \u2014 before it
+              Risk-scored dashboards surface what needs attention  before it
               becomes a problem.
             </p>
             <div className="stagger-children mt-8 space-y-3">

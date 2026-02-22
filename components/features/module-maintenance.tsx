@@ -47,7 +47,7 @@ export function MaintenanceModule() {
           <p className="animate-on-scroll mt-4 text-base leading-relaxed text-text-muted-on-dark max-w-2xl mx-auto">
             A tenant WhatsApps you a photo of a leak at 11pm. You save it
             somewhere, text a plumber, call the landlord... and forget to follow
-            up. Propentro automates the entire workflow \u2014 you handle exceptions
+            up. Propentro automates the entire workflow  you handle exceptions
             only.
           </p>
         </div>

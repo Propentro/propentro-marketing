@@ -20,7 +20,7 @@ const scenarios = [
     tab: "The 11pm Leak",
     title: "The 11pm Leak",
     description:
-      "Tenant submitted a request. Under the \u20AC200 threshold \u2014 auto-approved. Your preferred plumber was notified. You see the completed ticket in the morning.",
+      "Tenant submitted a request. Under the \u20AC200 threshold  auto-approved. Your preferred plumber was notified. You see the completed ticket in the morning.",
     visual: "maintenance",
   },
   {
@@ -29,7 +29,7 @@ const scenarios = [
     tab: "The Landlord Call",
     title: "The Landlord Call",
     description:
-      "\u2018Is the rent in?\u2019 Pull up their portfolio in 2 seconds. Rent status, maintenance updates, compliance \u2014 everything. Or better: they check their own portal.",
+      "\u2018Is the rent in?\u2019 Pull up their portfolio in 2 seconds. Rent status, maintenance updates, compliance  everything. Or better: they check their own portal.",
     visual: "portfolio",
   },
 ];
@@ -41,11 +41,11 @@ function BankFeedVisual() {
         Bank Feed Auto-Match
       </div>
       {[
-        { ref: "RENT-4B-0125", amount: "+\u20AC1,450.00", tenant: "J. Murphy \u2014 Unit 4B", matched: true },
-        { ref: "RENT-12A-0125", amount: "+\u20AC1,200.00", tenant: "S. O\u2019Brien \u2014 Unit 12A", matched: true },
-        { ref: "RENT-7C-0125", amount: "\u20AC0.00", tenant: "K. Walsh \u2014 Unit 7C", matched: false },
-        { ref: "RENT-9A-0125", amount: "+\u20AC1,100.00", tenant: "P. Byrne \u2014 Unit 9A", matched: true },
-        { ref: "RENT-2D-0125", amount: "+\u20AC950.00", tenant: "M. Doyle \u2014 Unit 2D", matched: true },
+        { ref: "RENT-4B-0125", amount: "+\u20AC1,450.00", tenant: "J. Murphy  Unit 4B", matched: true },
+        { ref: "RENT-12A-0125", amount: "+\u20AC1,200.00", tenant: "S. O\u2019Brien  Unit 12A", matched: true },
+        { ref: "RENT-7C-0125", amount: "\u20AC0.00", tenant: "K. Walsh  Unit 7C", matched: false },
+        { ref: "RENT-9A-0125", amount: "+\u20AC1,100.00", tenant: "P. Byrne  Unit 9A", matched: true },
+        { ref: "RENT-2D-0125", amount: "+\u20AC950.00", tenant: "M. Doyle  Unit 2D", matched: true },
       ].map((tx) => (
         <div
           key={tx.ref}
@@ -93,7 +93,7 @@ function MaintenanceVisual() {
       </div>
       <div className="space-y-3">
         {[
-          { time: "11:14 PM", label: "Tenant submitted request", sub: "Unit 6A \u2014 Leaking pipe in bathroom", status: "text-text-on-dark", dot: "bg-primary" },
+          { time: "11:14 PM", label: "Tenant submitted request", sub: "Unit 6A  Leaking pipe in bathroom", status: "text-text-on-dark", dot: "bg-primary" },
           { time: "11:14 PM", label: "Auto-triage: Under \u20AC200 threshold", sub: "Auto-approved per policy", status: "text-emerald-600", dot: "bg-emerald-500" },
           { time: "11:15 PM", label: "Contractor notified", sub: "Dublin Plumbing Services (preferred)", status: "text-text-on-dark", dot: "bg-primary" },
           { time: "8:30 AM", label: "Job completed", sub: "Replaced washer, leak resolved", status: "text-emerald-600", dot: "bg-emerald-500" },

@@ -6,9 +6,9 @@ import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title:
-    "Propentro \u2014 Property Management Software for Ireland & UK",
+    "Propentro  Property Management Software for Ireland & UK",
   description:
-    "Propentro replaces the spreadsheets, WhatsApp threads, and calendar reminders you use to run your portfolio \u2014 with one platform that actually talks to itself. Rent collection, compliance, maintenance, leases, and landlord reporting. Book a 20-minute demo.",
+    "Propentro replaces the spreadsheets, WhatsApp threads, and calendar reminders you use to run your portfolio  with one platform that actually talks to itself. Rent collection, compliance, maintenance, leases, and landlord reporting. Book a 20-minute demo.",
   keywords:
     "property management software Ireland, property management platform, landlord software Ireland, rental management software, tenant management system, lease management software, property compliance software Ireland, property maintenance software, RTB compliance, RPZ rent calculator, BER tracking, property management UK",
 };

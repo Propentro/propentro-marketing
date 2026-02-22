@@ -24,7 +24,7 @@ export function AboutHero() {
           <span className="font-light"> Actually Need.</span>
         </h1>
         <p className="animate-on-scroll mt-6 text-base md:text-lg leading-relaxed text-text-muted-on-dark max-w-2xl mx-auto">
-          Propentro was built from real operational experience \u2014 not
+          Propentro was built from real operational experience  not
           assumptions. We watched the problem firsthand and decided to fix it.
         </p>
       </div>

@@ -24,14 +24,14 @@ export function FeaturesHero() {
         </h1>
         <p className="animate-on-scroll mt-6 text-base md:text-lg leading-relaxed text-text-muted-on-dark max-w-2xl mx-auto">
           Every property management firm is different. Some manage 30 units with
-          one person. Some manage 3,000 with a team of 20. Propentro adapts \u2014
+          one person. Some manage 3,000 with a team of 20. Propentro adapts 
           start with the modules you need today, add more as your operation
           grows.
         </p>
         <p className="animate-on-scroll mt-4 text-sm text-text-muted-on-dark/70 max-w-xl mx-auto">
           All modules connect seamlessly. A lease links to payments, which link
           to compliance, which link to the landlord{"'"}s portal. Pick your starting
-          point \u2014 everything else clicks into place.
+          point  everything else clicks into place.
         </p>
       </div>
     </section>

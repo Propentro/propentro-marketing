@@ -12,7 +12,7 @@ const signals = [
   {
     icon: FileText,
     title: "Depth, Not Demos",
-    text: "28 modules. 50+ pages of feature specification. Every workflow designed from real property management operations \u2014 not assumptions.",
+    text: "28 modules. 50+ pages of feature specification. Every workflow designed from real property management operations  not assumptions.",
   },
   {
     icon: Hammer,

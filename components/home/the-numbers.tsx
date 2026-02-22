@@ -102,7 +102,7 @@ export function TheNumbers() {
             A firm managing 100 units saves 50+ hours every month.
           </p>
           <p className="mt-2 text-sm text-text-muted-on-dark">
-            That{"'"}s managing 50 more units with the same team \u2014 or finally
+            That{"'"}s managing 50 more units with the same team  or finally
             leaving the office by 6pm.
           </p>
         </div>

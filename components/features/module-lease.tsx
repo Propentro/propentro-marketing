@@ -38,7 +38,7 @@ export function LeaseModule() {
           <p className="animate-on-scroll mt-4 text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto">
             A lease expires next month and nobody noticed until the tenant asks.
             Propentro gives you visibility into every expiry, break clause, and
-            renewal window \u2014 six months ahead.
+            renewal window  six months ahead.
           </p>
         </div>
 

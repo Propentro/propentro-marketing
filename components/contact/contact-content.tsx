@@ -77,7 +77,7 @@ export function ContactContent() {
               Book a Demo<span className="text-primary">.</span>
             </h1>
             <p className="animate-on-scroll mt-5 text-base leading-relaxed text-muted-foreground">
-              Whether you manage 30 units or 3,000 \u2014 Propentro adapts to your
+              Whether you manage 30 units or 3,000  Propentro adapts to your
               operation. Tell us about your workflow and we{"'"}ll show you the
               modules that matter most to you.
             </p>
@@ -102,7 +102,7 @@ export function ContactContent() {
             </div>
           </div>
 
-          {/* Right column \u2014 form */}
+          {/* Right column  form */}
           <div className="flex-1 animate-on-scroll">
             {submitted ? (
               <div className="rounded-xl border border-border bg-secondary p-8 text-center">

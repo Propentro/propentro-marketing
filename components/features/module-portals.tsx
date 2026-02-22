@@ -78,7 +78,7 @@ export function PortalsModule() {
             <p className="animate-on-scroll mt-5 text-base leading-relaxed text-text-muted-on-dark">
               Landlords call 5 times a day: {"'"}Is the rent in?{"'"} Tenants email
               about their lease. Contractors need job details. Give everyone
-              their own portal \u2014 real-time data, fewer calls, happier
+              their own portal  real-time data, fewer calls, happier
               relationships.
             </p>
             <div className="stagger-children mt-8 space-y-3">

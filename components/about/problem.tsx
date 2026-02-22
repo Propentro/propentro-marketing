@@ -21,13 +21,13 @@ export function Problem() {
           </p>
           <p className="animate-on-scroll">
             Compliance deadlines live in someone{"'"}s head. Financial reporting
-            happens once a month \u2014 if you{"'"}re lucky. And scaling means hiring
+            happens once a month  if you{"'"}re lucky. And scaling means hiring
             more people to do the same manual work, because the tools haven{"'"}t
             caught up.
           </p>
           <p className="animate-on-scroll">
             This isn{"'"}t a technology gap. It{"'"}s an infrastructure problem.
-            Every other industry got its platform \u2014 CRMs for sales, ERPs for
+            Every other industry got its platform  CRMs for sales, ERPs for
             manufacturing, fintech for banking. Property management never got
             its operating system.
           </p>

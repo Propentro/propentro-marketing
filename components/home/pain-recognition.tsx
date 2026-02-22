@@ -20,7 +20,7 @@ const painCards = [
   },
   {
     icon: ShieldAlert,
-    text: "The gas cert for Block A expired 3 weeks ago. You only find out when the landlord asks \u2014 or worse, when the inspector shows up.",
+    text: "The gas cert for Block A expired 3 weeks ago. You only find out when the landlord asks  or worse, when the inspector shows up.",
   },
   {
     icon: FileSpreadsheet,

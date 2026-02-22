@@ -31,7 +31,7 @@ export function FinanceModule() {
               cross-referencing payments to tenants. Propentro connects your bank
               accounts via Open Banking. Incoming payments are auto-matched using
               reference codes. See exactly who{"'"}s paid, who{"'"}s overdue, and your
-              precise cash position \u2014 right now, not at month-end.
+              precise cash position  right now, not at month-end.
             </p>
             <div className="stagger-children mt-8 space-y-3">
               {highlights.map((h) => {
@@ -53,10 +53,10 @@ export function FinanceModule() {
                 Bank Feed Auto-Match
               </div>
               {[
-                { ref: "RENT-4B-0125", amount: "+\u20AC1,450.00", tenant: "J. Murphy \u2014 Unit 4B", matched: true },
-                { ref: "RENT-12A-0125", amount: "+\u20AC1,200.00", tenant: "S. O\u2019Brien \u2014 Unit 12A", matched: true },
-                { ref: "RENT-7C-0125", amount: "\u20AC0.00", tenant: "K. Walsh \u2014 Unit 7C", matched: false },
-                { ref: "RENT-9A-0125", amount: "+\u20AC1,100.00", tenant: "P. Byrne \u2014 Unit 9A", matched: true },
+                { ref: "RENT-4B-0125", amount: "+\u20AC1,450.00", tenant: "J. Murphy  Unit 4B", matched: true },
+                { ref: "RENT-12A-0125", amount: "+\u20AC1,200.00", tenant: "S. O\u2019Brien  Unit 12A", matched: true },
+                { ref: "RENT-7C-0125", amount: "\u20AC0.00", tenant: "K. Walsh  Unit 7C", matched: false },
+                { ref: "RENT-9A-0125", amount: "+\u20AC1,100.00", tenant: "P. Byrne  Unit 9A", matched: true },
               ].map((tx) => (
                 <div
                   key={tx.ref}

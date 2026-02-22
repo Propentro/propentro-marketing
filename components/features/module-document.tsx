@@ -59,7 +59,7 @@ export function DocumentModule() {
               <div className="space-y-2.5">
                 {[
                   {
-                    name: "Lease Agreement \u2014 Unit 4B",
+                    name: "Lease Agreement  Unit 4B",
                     type: "Contract",
                     links: [
                       { icon: Building2, label: "Riverside Court" },

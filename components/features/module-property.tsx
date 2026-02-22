@@ -29,7 +29,7 @@ export function PropertyModule() {
             <p className="animate-on-scroll mt-5 text-base leading-relaxed text-muted-foreground">
               Which block has 3-bed units? Who{"'"}s the freeholder? What{"'"}s the
               BER rating? Every property carries its complete financial history,
-              maintenance log, and compliance status \u2014 structured, linked, and
+              maintenance log, and compliance status  structured, linked, and
               searchable.
             </p>
             <div className="stagger-children mt-8 space-y-3">
