@@ -6,12 +6,16 @@ export function AboutHero() {
   const ref = useScrollAnimation();
 
   return (
-    <section ref={ref} className="bg-surface-dark pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
+    <section
+      ref={ref}
+      className="bg-surface-dark pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden"
+    >
       <div className="grain-texture absolute inset-0" />
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full opacity-15"
         style={{
-          background: "radial-gradient(ellipse, hsl(263 70% 42% / 0.5) 0%, transparent 70%)",
+          background:
+            "radial-gradient(ellipse, hsl(263 70% 42% / 0.5) 0%, transparent 70%)",
         }}
       />
       <div className="relative z-10 mx-auto max-w-4xl px-5 lg:px-8 text-center">
@@ -20,7 +24,8 @@ export function AboutHero() {
           <span className="font-light"> Actually Need.</span>
         </h1>
         <p className="animate-on-scroll mt-6 text-base md:text-lg leading-relaxed text-text-muted-on-dark max-w-2xl mx-auto">
-          Propentro was built from real operational experience — not assumptions.
+          Propentro was built from real operational experience \u2014 not
+          assumptions. We watched the problem firsthand and decided to fix it.
         </p>
       </div>
     </section>

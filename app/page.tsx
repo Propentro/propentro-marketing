@@ -1,8 +1,10 @@
 import { Hero } from "@/components/home/hero";
-import { Story } from "@/components/home/story";
-import { Platform } from "@/components/home/platform";
-import { Experience } from "@/components/home/experience";
-import { Vision } from "@/components/home/vision";
+import { PainRecognition } from "@/components/home/pain-recognition";
+import { TheShift } from "@/components/home/the-shift";
+import { DayWithPropentro } from "@/components/home/day-with-propentro";
+import { FindYourStartingPoint } from "@/components/home/find-your-starting-point";
+import { TheNumbers } from "@/components/home/the-numbers";
+import { BuiltForMarket } from "@/components/home/built-for-market";
 import { Credibility } from "@/components/home/credibility";
 import { CTA } from "@/components/home/cta";
 
@@ -10,10 +12,12 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Story />
-      <Platform />
-      <Experience />
-      <Vision />
+      <PainRecognition />
+      <TheShift />
+      <DayWithPropentro />
+      <FindYourStartingPoint />
+      <TheNumbers />
+      <BuiltForMarket />
       <Credibility />
       <CTA />
     </>

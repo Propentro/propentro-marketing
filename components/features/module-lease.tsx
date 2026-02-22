@@ -1,13 +1,15 @@
 "use client";
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { PenTool, Bell, GitBranch, FileStack } from "lucide-react";
+import { Calendar, Bell, FileText, Scale, ShieldCheck, FileStack } from "lucide-react";
 
 const highlights = [
-  { icon: PenTool, label: "Digital signatures" },
-  { icon: Bell, label: "Auto-renewal alerts" },
-  { icon: GitBranch, label: "Version history" },
-  { icon: FileStack, label: "Template library" },
+  { icon: Calendar, label: "Lease timeline: expiry, break clauses, renewal windows" },
+  { icon: Bell, label: "6-month advance alerts" },
+  { icon: FileText, label: "Auto-generate renewal offers with RPZ-compliant rent" },
+  { icon: Scale, label: "Part 4 tenancy tracking (Ireland-specific)" },
+  { icon: ShieldCheck, label: "Section 21 notice management (UK)" },
+  { icon: FileStack, label: "Document templates: new lease, renewal, termination" },
 ];
 
 const stages = [
@@ -23,15 +25,20 @@ export function LeaseModule() {
   const ref = useScrollAnimation();
 
   return (
-    <section ref={ref} className="bg-secondary py-24 md:py-32">
+    <section id="leases" ref={ref} className="bg-secondary py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <p className="animate-on-scroll section-label text-accent justify-center mb-5">MODULE 03</p>
+          <p className="animate-on-scroll section-label text-accent justify-center mb-5">
+            LEASES
+          </p>
           <h2 className="animate-on-scroll font-display text-3xl md:text-4xl font-semibold leading-[1.15] tracking-tight text-foreground text-balance">
-            The Entire Lease Journey<span className="font-light">. One Flow.</span>
+            See Every Renewal
+            <span className="font-light"> Before It Surprises You.</span>
           </h2>
           <p className="animate-on-scroll mt-4 text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-            From first draft to digital signature, from rent commencement to renewal decision — no more version chaos, no more missed deadlines.
+            A lease expires next month and nobody noticed until the tenant asks.
+            Propentro gives you visibility into every expiry, break clause, and
+            renewal window \u2014 six months ahead.
           </p>
         </div>
 
@@ -57,13 +64,13 @@ export function LeaseModule() {
         </div>
 
         {/* Highlights */}
-        <div className="stagger-children mt-12 flex flex-wrap items-center justify-center gap-6">
+        <div className="stagger-children mt-12 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
           {highlights.map((h) => {
             const Icon = h.icon;
             return (
-              <div key={h.label} className="animate-on-scroll flex items-center gap-2.5 text-sm text-foreground">
-                <Icon className="w-4 h-4 text-primary shrink-0" />
-                {h.label}
+              <div key={h.label} className="animate-on-scroll flex items-start gap-2.5 text-sm text-foreground">
+                <Icon className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span>{h.label}</span>
               </div>
             );
           })}

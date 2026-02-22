@@ -1,21 +1,23 @@
-import React from "react"
+import React from "react";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Propentro — The Operating System for Modern Property Management",
+  title:
+    "Propentro \u2014 Property Management Software for Ireland & UK",
   description:
-    "Propentro brings your properties, tenants, leases, finances, maintenance, and compliance into one platform — so you can run your portfolio like a modern business.",
+    "Propentro replaces the spreadsheets, WhatsApp threads, and calendar reminders you use to run your portfolio \u2014 with one platform that actually talks to itself. Rent collection, compliance, maintenance, leases, and landlord reporting. Book a 20-minute demo.",
   keywords:
-    "property management software, property management platform, landlord software, rental management software, property operations platform, tenant management system, lease management software, property compliance software, property maintenance software",
+    "property management software Ireland, property management platform, landlord software Ireland, rental management software, tenant management system, lease management software, property compliance software Ireland, property maintenance software, RTB compliance, RPZ rent calculator, BER tracking, property management UK",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
+  themeColor: "#0c0a17",
 };
 
 export default function RootLayout({

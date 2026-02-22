@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ContactContent } from "@/components/contact/contact-content";
 
 export const metadata: Metadata = {
-  title: "Contact — Propentro",
+  title: "Book a Demo \u2014 Propentro",
   description:
-    "Get in touch with Propentro. Whether you manage 50 units or 5,000, tell us about your operation.",
+    "Book a 20-minute demo of Propentro. Whether you manage 30 units or 3,000, we\u2019ll map Propentro to your operation.",
 };
 
 export default function ContactPage() {
