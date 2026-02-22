@@ -1,21 +1,23 @@
-import { Hero } from "@/components/home/hero";
-import { Story } from "@/components/home/story";
-import { Platform } from "@/components/home/platform";
-import { Experience } from "@/components/home/experience";
-import { Vision } from "@/components/home/vision";
-import { Credibility } from "@/components/home/credibility";
-import { CTA } from "@/components/home/cta";
+import { Hero } from "@/components/sections/hero";
+import { Problem } from "@/components/sections/problem";
+import { Platform } from "@/components/sections/platform";
+import { Experience } from "@/components/sections/experience";
+import { Ireland } from "@/components/sections/ireland";
+import { Numbers } from "@/components/sections/numbers";
+import { Trust } from "@/components/sections/trust";
+import { Contact } from "@/components/sections/contact";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Story />
+      <Problem />
       <Platform />
       <Experience />
-      <Vision />
-      <Credibility />
-      <CTA />
+      <Ireland />
+      <Numbers />
+      <Trust />
+      <Contact />
     </>
   );
 }

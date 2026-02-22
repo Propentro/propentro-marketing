@@ -10,31 +10,44 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 260 60% 4%;
+    /* Purple Brand */
+    --purple-primary: 258 65% 38%;
+    --purple-light: 258 60% 55%;
+    --purple-glow: 258 80% 65%;
+    --purple-muted: 258 30% 20%;
+
+    /* Dark Theme */
+    --bg-dark: 240 20% 4%;
+    --bg-dark-elevated: 240 15% 8%;
+    --bg-dark-border: 240 15% 15%;
+    --text-primary-dark: 0 0% 98%;
+    --text-secondary-dark: 240 10% 65%;
+
+    /* Light Theme */
+    --background: 0 0% 99%;
+    --foreground: 240 20% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 260 60% 4%;
+    --card-foreground: 240 20% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 260 60% 4%;
-    --primary: 263 70% 42%;
+    --popover-foreground: 240 20% 10%;
+    --primary: 258 65% 38%;
     --primary-foreground: 0 0% 100%;
     --secondary: 265 20% 97%;
-    --secondary-foreground: 260 60% 4%;
-    --muted: 265 15% 97%;
-    --muted-foreground: 260 5% 45%;
-    --accent: 263 54% 73%;
-    --accent-foreground: 260 60% 4%;
-    --destructive: 0 84.2% 60.2%;
+    --secondary-foreground: 240 20% 10%;
+    --muted: 240 10% 96%;
+    --muted-foreground: 240 10% 45%;
+    --accent: 258 60% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-    --border: 260 10% 90%;
-    --input: 260 10% 90%;
-    --ring: 263 70% 42%;
-    --radius: 0.625rem;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 258 65% 38%;
 
-    --surface-dark: 260 60% 4%;
-    --surface-dark-secondary: 258 40% 6%;
-    --text-on-dark: 264 30% 95%;
-    --text-muted-on-dark: 264 15% 65%;
+    /* Semantic */
+    --green-success: 152 68% 40%;
+    --amber-warning: 38 92% 50%;
+    --red-danger: 0 72% 51%;
   }
 }
 
@@ -45,48 +58,35 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-/* Noise texture for hero backgrounds */
-.grain-texture::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 128px 128px;
-  pointer-events: none;
-  z-index: 1;
+/* Grid pattern for hero background */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
-/* Scroll-triggered animation */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-}
-.animate-on-scroll.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Subtle dot pattern */
+.dot-pattern {
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-/* Stagger children */
-.stagger-children .animate-on-scroll:nth-child(1) { transition-delay: 0ms; }
-.stagger-children .animate-on-scroll:nth-child(2) { transition-delay: 80ms; }
-.stagger-children .animate-on-scroll:nth-child(3) { transition-delay: 160ms; }
-.stagger-children .animate-on-scroll:nth-child(4) { transition-delay: 240ms; }
-.stagger-children .animate-on-scroll:nth-child(5) { transition-delay: 320ms; }
-.stagger-children .animate-on-scroll:nth-child(6) { transition-delay: 400ms; }
-.stagger-children .animate-on-scroll:nth-child(7) { transition-delay: 480ms; }
+/* Purple glow effect */
+.purple-glow {
+  background: radial-gradient(
+    600px circle at 50% 0%,
+    hsl(258 80% 65% / 0.12),
+    transparent 70%
+  );
+}
 
 /* Section label style */
 .section-label {
-  @apply text-[11px] font-semibold uppercase tracking-[0.08em] flex items-center gap-3;
-}
-.section-label::before {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 1px;
-  background: currentColor;
+  @apply text-xs font-semibold uppercase tracking-[0.15em] text-purple-light;
 }

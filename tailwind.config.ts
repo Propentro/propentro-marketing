@@ -11,8 +11,13 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-general-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-clash-display)", "system-ui", "sans-serif"],
+        sans: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
       },
       colors: {
         background: "hsl(var(--background))",
@@ -48,15 +53,26 @@ const config: Config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        "surface-dark": "hsl(var(--surface-dark))",
-        "surface-dark-secondary": "hsl(var(--surface-dark-secondary))",
-        "text-on-dark": "hsl(var(--text-on-dark))",
-        "text-muted-on-dark": "hsl(var(--text-muted-on-dark))",
+        // Dark theme surfaces
+        "dark-bg": "hsl(var(--bg-dark))",
+        "dark-elevated": "hsl(var(--bg-dark-elevated))",
+        "dark-border": "hsl(var(--bg-dark-border))",
+        "dark-text": "hsl(var(--text-primary-dark))",
+        "dark-text-secondary": "hsl(var(--text-secondary-dark))",
+        // Purple brand
+        "purple-primary": "hsl(var(--purple-primary))",
+        "purple-light": "hsl(var(--purple-light))",
+        "purple-glow": "hsl(var(--purple-glow))",
+        "purple-muted": "hsl(var(--purple-muted))",
+        // Semantic
+        "green-success": "hsl(var(--green-success))",
+        "amber-warning": "hsl(var(--amber-warning))",
+        "red-danger": "hsl(var(--red-danger))",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "12px",
+        md: "8px",
+        sm: "6px",
       },
       keyframes: {
         "accordion-down": {
@@ -67,10 +83,15 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },
