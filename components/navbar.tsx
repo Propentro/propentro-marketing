@@ -36,7 +36,10 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-0 font-display text-xl font-semibold text-foreground">
+        <Link
+          href="/"
+          className="flex items-center gap-0 font-display text-xl font-semibold text-foreground"
+        >
           Propentro
           <span className="text-primary">.</span>
         </Link>
@@ -70,7 +73,7 @@ export function Navbar() {
             href="/contact"
             className="inline-flex items-center justify-center rounded-[10px] bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary/90 transition-all hover:shadow-md"
           >
-            Get Started
+            Book a Demo
           </Link>
         </div>
 
@@ -81,7 +84,11 @@ export function Navbar() {
           className="md:hidden flex items-center justify-center w-11 h-11 rounded-lg text-foreground"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileOpen ? (
+            <X className="w-5 h-5" />
+          ) : (
+            <Menu className="w-5 h-5" />
+          )}
         </button>
       </nav>
 
@@ -113,7 +120,7 @@ export function Navbar() {
               href="/contact"
               className="inline-flex items-center justify-center rounded-[10px] bg-primary px-5 py-3 text-base font-medium text-primary-foreground"
             >
-              Get Started
+              Book a Demo
             </Link>
           </div>
         </div>
