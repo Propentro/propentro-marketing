@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { DashboardMockup } from "@/components/dashboard-mockup";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export function Hero() {
@@ -10,7 +8,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-surface-dark pt-32 pb-16 md:pt-40 md:pb-24"
+      className="relative overflow-hidden bg-surface-dark pt-36 pb-24 md:pt-44 md:pb-32 min-h-[90vh] flex items-center"
     >
       {/* Grain texture */}
       <div className="grain-texture absolute inset-0" />
@@ -24,54 +22,52 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8 w-full">
         <div className="flex flex-col items-center text-center">
-          <h1 className="animate-on-scroll font-display text-4xl font-semibold leading-[1.1] tracking-tight text-text-on-dark sm:text-5xl md:text-6xl lg:text-[72px] max-w-4xl text-balance">
-            Your Properties. Your Tenants.
-            <br className="hidden sm:block" />
-            Your Leases. Your Finances.
-            <br className="hidden sm:block" />
-            <span className="font-light">Finally, One Place</span>
+          {/* Eyebrow */}
+          <p className="animate-on-scroll section-label text-accent justify-center mb-8">
+            PROPERTY MANAGEMENT PLATFORM
+          </p>
+
+          {/* Main heading */}
+          <h1 className="animate-on-scroll font-display text-4xl font-semibold leading-[1.1] tracking-tight text-text-on-dark sm:text-5xl md:text-6xl lg:text-[68px] max-w-4xl text-balance">
+            The operating system for professional property management
             <span className="text-accent">.</span>
           </h1>
 
-          <p className="animate-on-scroll mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-text-muted-on-dark">
-            Propentro replaces the spreadsheets, WhatsApp threads, and calendar
-            reminders you use to run your portfolio — with one platform that
-            actually talks to itself.
+          {/* Subheading */}
+          <p className="animate-on-scroll mt-6 max-w-[620px] text-base md:text-lg leading-relaxed text-text-muted-on-dark">
+            A unified platform for contacts, properties, finances, maintenance,
+            compliance, and documents. Built for firms managing 30 to 3,000+
+            units who need real software, not spreadsheets.
           </p>
 
+          {/* CTAs */}
           <div className="animate-on-scroll mt-8 flex flex-col sm:flex-row items-center gap-3">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-[10px] bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:shadow-xl hover:shadow-primary/30 min-w-[200px]"
-            >
-              Book a 20-Minute Demo
-            </Link>
             <button
               onClick={() => {
-                const el = document.getElementById("pain-recognition");
+                const el = document.getElementById("roadmap");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="inline-flex items-center justify-center rounded-[10px] bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:shadow-xl hover:shadow-primary/30 min-w-[200px]"
+            >
+              View the Roadmap
+            </button>
+            <button
+              onClick={() => {
+                const el = document.getElementById("about-builder");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
               className="inline-flex items-center justify-center rounded-[10px] border border-[#2a2640] bg-transparent px-6 py-3 text-sm font-medium text-text-on-dark hover:bg-[#ffffff08] transition-all min-w-[200px]"
             >
-              See What It Replaces
+              About the Project
             </button>
           </div>
 
-          {/* Dashboard Mockup */}
-          <div
-            className="animate-on-scroll mt-16 md:mt-20 w-full max-w-5xl"
-            style={{ perspective: "1200px" }}
-          >
-            <div
-              style={{
-                transform: "rotateX(2deg)",
-                transformOrigin: "center bottom",
-              }}
-            >
-              <DashboardMockup />
-            </div>
+          {/* Status badge */}
+          <div className="animate-on-scroll mt-8 flex items-center gap-2 text-sm text-text-muted-on-dark">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>In active development — v1.0 coming 2026</span>
           </div>
         </div>
       </div>

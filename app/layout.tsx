@@ -5,12 +5,11 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title:
-    "Propentro  Property Management Software for Ireland & UK",
+  title: "Propentro — Property Management Platform for Professional Firms",
   description:
-    "Propentro replaces the spreadsheets, WhatsApp threads, and calendar reminders you use to run your portfolio  with one platform that actually talks to itself. Rent collection, compliance, maintenance, leases, and landlord reporting. Book a 20-minute demo.",
+    "A unified platform for contacts, properties, finances, maintenance, compliance, and documents. Built for firms managing 30 to 3,000+ units. Currently in active development.",
   keywords:
-    "property management software Ireland, property management platform, landlord software Ireland, rental management software, tenant management system, lease management software, property compliance software Ireland, property maintenance software, RTB compliance, RPZ rent calculator, BER tracking, property management UK",
+    "property management software Ireland, property management platform, landlord software Ireland, rental management software, RTB compliance, RPZ rent calculator, BER tracking, property management UK",
 };
 
 export const viewport: Viewport = {
